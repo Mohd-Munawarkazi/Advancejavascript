@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>call apply</title>
+</head>
+<body>
+    <h1>Call apply method</h1>
+    <p> <span style="color: red;"> what is the difference between call () and apply () in JavaScript?</span> 
+        
+        Difference between call() and apply() method: The only difference is call() method takes the arguments separated by comma while apply() method takes the array of arguments</p>
+    <p>call and apply are very similar—they invoke a function with a specified this context, and optional arguments. The only difference between call and apply is that call requires the arguments to be passed in one-by-one, and apply takes the arguments as an array.</p>
+    <p>The apply() method invokes a function with a given this value and arguments provided as an array.
+        The apply() method is similar to the call() method excepts that it accepts the arguments of the function as an array instead of individual arguments.</p>
+    <script>
+        let youtuber={
+            name:"thapa",
+            content:"programming",
+            feature:function(rating,support){
+                console.log(`my fav youtuber is ${this.name} it is a ${this.content} chanel i like it
+                 and i give ${rating} star plzzzz guys suppart ${support} him AND share it with your
+                  freinds..............😎💯👍`);
+
+            }
+
+
+        }
+        youtuber.feature(5,"Subscribe");
+     
+
+
+        const youtuber2={
+            name:"harry",
+            content:"FullStack Developer",
+            // ChannelName:"codewithHarry"
+            
+        }
+
+
+        setTimeout(()=>{
+            return  youtuber.feature.call(youtuber2,4,"Subscribe")
+
+},3000);
+
+       
+        
+
+    </script>
+</body>
+</html>
