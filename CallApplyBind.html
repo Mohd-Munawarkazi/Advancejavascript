@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Call method</title>
+</head>
+<body>
+    <h1>Call Apply and Bind Method</h1>
+    
+</body>
+<script>
+            const person={
+                name:"Ammar",
+                lastName:"Prem",
+                feature:function(branch,college){
+                    console.log(` hello and wel welcome ${this.name}     ${this.lastName}   is your branch ${branch} nad college name ${college}`)
+                }
+            }
+
+            // person.feature("mechanical","MGM");
+
+            let perSon2 ={
+                name:"Akshay",
+                lastName:"Aher",
+            
+            }
+
+        person.feature.call(perSon2,"CSS","VJIT mumbai")  //call method is here
+
+        person.feature.apply(perSon2,["ENTC","JNEC"])  //Apply method
+
+
+        ///////////////////bind method///
+
+
+
+
+         const Bindperson={
+             name:"Xyz",
+             lastName:"abc",
+             add:function(add,street){
+                 console.log(`hello ${this.name}  ${this.lastName} from ${add} ${street}`)
+             }
+         }
+            // Bindperson.add("hayt","wangi road ")
+
+            let Bindperson2={
+                name:"bind2",
+             lastName:"bind22",
+
+            }
+
+            let personBind=Bindperson.add.bind(Bindperson2)
+            personBind("A ","B")
+
+
+
+
+        
+</script>
+</html>
