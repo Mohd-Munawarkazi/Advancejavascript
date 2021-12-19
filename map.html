@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>map method</title>
+</head>
+<body>
+    <h1>map method</h1>
+<p id="data"></p>
+    <script>
+        const oldArray=["Asif","munawar","umair","Junaid","khan"];
+            console.log(oldArray[0])
+            console.log(oldArray[1])
+            
+            console.log(oldArray[1])
+            console.log(oldArray[2])
+
+
+            const newArray=oldArray.map((cVal)=>{
+                // return cVal+"  tekisky"
+                return cVal
+            }) 
+            console.log(newArray);
+
+
+            const oldArrObjec=[
+                {id:1,name:"munawar",class:"BE",branch:"mechanical"},
+                {id:2,name:"Asif",class:"BE",branch:"ENTC"},
+                {id:3,name:"JUnaid sir",class:"BE",branch:"Oracle"},
+                {id:4,name:"Asim bhai",class:"BE",branch:"Computer Science"},
+
+            ];
+
+            console.log(oldArrObjec[0].name)
+            console.log(oldArrObjec[0].class)
+            console.log(oldArrObjec[0].branch)
+            console.log(oldArrObjec[1].name)
+            console.log(oldArrObjec[2].name)
+            console.log(oldArrObjec[3].name)
+
+            const newObje=oldArrObjec.map((CValue,index,arr)=>{
+                return `my name is ${CValue.name}`
+
+            })
+            console.log(newObje)
+
+            document.getElementById("data").innerHTML=newObje;
+
+
+
+
+
+    </script>
+    
+</body>
+</html>
